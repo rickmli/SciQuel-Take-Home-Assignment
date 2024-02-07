@@ -33,6 +33,11 @@ main {
   display: flex;
   flex-direction: column;
   height: 27rem;
+  transition: all 300ms linear;
+}
+
+#hero:hover {
+  transform: scale(1.05);
 }
 
 .heroTextBox {
