@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1;
+}
+
+main {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 2rem 0 2rem;
+  max-width: 80rem;
+}
+
+.landingPageTitle {
+  padding: 1.5rem 0 1rem 0;
+  color: #073528;
+  font-weight: 500;
+  font-size: 3.5rem;
+  font-family: "Gayathri", sans-serif;
+}
+
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 27rem;
+}
+
+.heroTextBox {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  width: 40rem;
+  border-radius: 5px;
+  color: white;
+  transition: all 300ms;
+  transform: translate(0, -50%);
+
+  gap: 0.8rem;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(#1a6f8c, #63a59d);
+  transition: all 1000ms ease-out;
+}
+
+.category {
+  display: block;
+  width: fit-content;
+  border-radius: 5px;
+  color: white;
+}
+
+.category--biology,
+.category--chemistry {
+  background-color: rgb(202, 124, 94);
+}
+
+.category--geology {
+  background-color: rgb(39, 83, 58);
+}
+
+.heroCategory {
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.heroTitle {
+  font-size: 2.3rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.heroDiscript {
+  font-weight: 300;
+  font-size: 1.6rem;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+}
+
+.heroImageBox {
+  align-self: flex-end;
+  width: 56%;
+  height: 100%;
+  filter: brightness(0.85);
+  transition: width 1000ms ease-out;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+
+  object-fit: cover;
+}
+
+.heroFooter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 1.2rem;
+  color: rgb(158, 158, 158);
+  font-size: 1.5rem;
+  transition: postion 3000ms ease-in;
+}
+
+#recentArticles {
+  margin-top: 6.8rem;
+}
+
+.articleCards {
+  display: grid;
+  column-gap: 3rem;
+
+  row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.articleCard {
+  border: 1px solid rgba(0, 0, 0, 0.176);
+  border-radius: 5px;
+  background-color: rgb(248, 248, 255);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: all 300ms ease-out;
+}
+
+.articleCard:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transform: scale(1.05);
+}
+
+.articleCardTextBox {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.5rem;
+
+  gap: 0.9rem;
+}
+
+.articleCardHeader {
+  position: relative;
+}
+
+.articleCardCategory {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.articleCardLabel {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  color: rgb(128, 128, 128);
+  letter-spacing: 0.7px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.articleCardBody {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2.2rem;
+
+  gap: 1.3rem;
+}
+
+.articleCardTitle {
+  font-weight: 400;
+  font-size: 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.articleCardContent {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  font-weight: 300;
+  font-size: 1.33rem;
+  font-family: "Quicksand", sans-serif;
+
+  -webkit-line-clamp: 2;
+}
+
+.articleCardFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  color: rgb(158, 158, 158);
+  font-size: 1.1rem;
+}
+
+.articleCardImageBox {
+  overflow: hidden;
+  align-self: flex-end;
+  padding: 0.4rem;
+  /* width: 56%; */
+  height: 9rem;
+  filter: brightness(0.85);
+}
+
+.articleCardImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+
+  object-fit: cover;
+}
+
+.recentArticlesLink {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 2rem;
+  text-decoration: none;
+
+  gap: 1rem;
+}
+
+.recentArticlesLink {
+  transition: all 300ms;
+}
+
+.recentArticlesLink:link,
+.recentArticlesLink:visited {
+  color: rgb(68, 41, 41);
+}
+
+.recentArticlesLink:hover,
+.recentArticlesLink:active {
+  color: #1a6f8c;
+}
+
+.recentArticlesLinkContent {
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.recentArticlesLinkIcon {
+  width: 14px;
+}
+
+/* 480 768 1024 1280 */
+@media screen and (max-width: 768px) {
+  .articleCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroTextBox {
+    left: 1rem;
+    background-color: white;
+    color: rgb(26, 111, 140);
+    transform: translate(0, -50%);
+  }
+
+  .heroBackground {
+    opacity: 0;
+  }
+
+  .heroFooter {
+    position: relative;
+  }
+
+  .heroImageBox {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .recentArticlesLinkContent {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #recentArticles {
+    padding: 0 4rem;
+  }
+
+  .articleCards {
+    grid-template-columns: 1fr;
+  }
+
+  .articleCardBody {
+    margin-right: 0;
+  }
+
+  .recentArticlesLinkContent {
+    font-size: 2rem;
+  }
+}
