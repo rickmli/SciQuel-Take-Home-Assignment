@@ -284,7 +284,7 @@ main {
   }
 
   .heroFooter {
-    position: relative;
+    position: static;
   }
 
   .heroImageBox {
@@ -303,8 +303,39 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+  #hero {
+    height: auto;
+  }
+
   #recentArticles {
     padding: 0 4rem;
+  }
+
+  .heroTextBox {
+    position: relative;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    transform: none;
+  }
+
+  .heroBackground {
+    border-radius: 0 0 5px 5px;
+    opacity: 100%;
+  }
+
+  .heroFooter {
+    color: black;
+  }
+
+  .heroImageBox {
+    align-self: none;
+    order: -1;
+  }
+
+  .heroImage {
+    border-radius: 5px 5px 0 0;
   }
 
   .articleCards {
